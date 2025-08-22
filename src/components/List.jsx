@@ -14,7 +14,7 @@ const List = ({ filteredExtensions, handleRemove, handleToggle }) => {
                     </div>
 
                     <div className="flex flex-row justify-between items-center">
-                        <button onClick={() => handleRemove(ext.name)} className="border-card text-neutral-900 dark:text-neutral-0 h-10 rounded-full px-3 leading-[50%] red-outline">Remove</button>
+                        <button onClick={() => handleRemove(ext.name)} className="border-card text-neutral-900 dark:text-neutral-0 h-10 rounded-full px-3 leading-[50%] red-outline hover:cursor-pointer hover:bg-red-700 hover:text-neutral-0 dark:hover:bg-red-400 dark:hover:text-neutral-900">Remove</button>
 
                         <label className="relative inline-flex items-center cursor-pointer">
                             <input 
@@ -23,7 +23,7 @@ const List = ({ filteredExtensions, handleRemove, handleToggle }) => {
                                 checked={ext.isActive} 
                                 onChange={() => handleToggle(ext.name)} 
                             />
-                            <div className="w-11 h-6 bg-gray-200 peer-focus:outline-none rounded-full peer peer-checked:bg-blue-500 transition-all"></div>
+                            <div className="w-11 h-6 bg-gray-200 peer-focus:outline-none rounded-full peer peer-checked:bg-red-700 hover:bg-red-500 dark:peer-checked:bg-red-400 dark:hover:bg-red-700 transition-all"></div>
                             <div className="absolute left-0.5 top-0.5 w-5 h-5 bg-white rounded-full peer-checked:translate-x-5 transition-all"></div>
                         </label>
                     </div>
